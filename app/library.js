@@ -35,8 +35,27 @@ aritGeo:function(arr){
 
 },
 
-fizzBuzz:function(x)
-{
+findMinMax:function(arr){
+    var max = arr[0];
+    var min = arr[0];
+    for (var i = 0; i < arr.length; i++){
+        if (arr[i] > max){
+            max = arr[i];
+        }
+        if (arr[i] < min){
+            min = arr[i];
+        }
+    }
+    if (min === max){
+        return [max];
+    }
+    else{
+    return [min, max];
+    }
+ },
+
+
+fizzBuzz:function(x){
   if (x % 3 === 0 && x % 5 === 0){
     return 'FizzBuzz';
   }
